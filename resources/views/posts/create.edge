@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Create - Posts</title>
+  <link rel="stylesheet" href="https://semantic-ui.com/dist/semantic.min.css" />
+  <link rel="stylesheet" href="http://kindeditor.net/ke4/themes/default/default.css" />
+  <script src="http://kindeditor.net/ke4/kindeditor-min.js" charset="utf-8"></script>
+  <script src="http://kindeditor.net/ke4/lang/zh-CN.js" charset="utf-8"></script>
+  {{ style('global') }}
+  {{ script('global') }}
+</head>
+<body>
+  <div class="navbar">
+    <div class="ui container">
+      <div class="q-navbar">
+        <div class="q-lists items">
+          <div class="item">
+            <a href="/posts/">Home</a>
+          </div>
+        </div>
+        <div class="q-lists items">
+          <div class="ui item icon input">
+            <div class="item">
+              <a href="/posts/create">Create</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui container">
+    <h1 class="ui header">Create post</h1>
+    <form class="ui form" method="post" action="/posts/store">
+      <div class="field">
+        <label>Title</label>
+        <input type="text" name="title" placeholder="">
+      </div>
+      <div class="field">
+        <label>Image link</label>
+        <input type="url" name="image" placeholder="">
+      </div>
+      <div class="field">
+        <label>Content</label>
+        <textarea name="content" style="height: 400px;"></textarea>
+      </div>
+      {{ csrfField() }}
+      <button class="ui button" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* navbar */
+.navbar {background: #e5e5e5; margin-bottom: 50px;}
+.navbar .q-navbar {display: flex; justify-content: space-between; padding: 8px 0;}
+.navbar .q-navbar img, .q-navbar .q-logo {height: 40px; font-size: 0;}
+.navbar .items {display: flex; line-height: 40px;}
+.navbar .items .item {transition: .2s; color: rgba(0, 0, 0, 0.65); font-size: 1rem; text-decoration: none; cursor: pointer;}
+.navbar .items .item:hover {color: rgba(0, 0, 0, 1);}
+.main .item {position: relative; border: 0 solid #CCC; margin-bottom: 40px; overflow: hidden;}
+
+textarea {height: 400px;}
+
+@media only screen and (min-width: 1200px) {
+  .ui.container {
+    width: 1000px;
+    margin-left: auto!important;
+    margin-right: auto!important;
+  }
+}
